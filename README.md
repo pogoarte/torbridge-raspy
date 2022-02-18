@@ -1,13 +1,10 @@
 # torbridge
 
-Simple script install tor brdige
+Simple script install tor brdige (Tested on RaspiOS Bullseye and Debian Bullseye)
 
-Tested on RaspiOS Bullseye and Debian Bullseye.
-Run apt update and install tor, obfs4proxy, nyx and vnstat.
-
-Generate /etc/tor/torrc for bridge with:
-- notices.log (/var/log/tor/notices.log)
-- ControlPort (9051)
+Run apt update and install tor, obfs4proxy, nyx, vnstat and generate /etc/tor/torrc for bridge with:
+- notices.log
+- ControlPort
 - HashedControlPassword
 - BandwidthRate
 - BandwidthBurst

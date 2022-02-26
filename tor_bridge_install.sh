@@ -1,12 +1,11 @@
 #!/bin/sh -e
 
 clear
-
 echo ""
 echo "!!! If your bridge is behind a firewall or NAT, make sure to open TCP port: ORPort and obfs4proxy !!!"
 echo ""
 echo "- Tested on RaspiOS Bullseye and Debian Bullseye."
-echo "- Run apt update and install tor, obfs4proxy, nyx (tor monitor) and vnstat (network traffic monitor)"
+echo "- Run update and install tor, torsocks, obfs4proxy, nyx (tor monitor) and vnstat (network traffic monitor)"
 echo "- Generate /etc/tor/torrc for bridge with:"
 echo "  notices.log (/var/log/tor/notices.log)"
 echo "  ControlPort (9051)"
@@ -20,7 +19,6 @@ echo -n "Press <any_key> to continue or <ctrl+c> for terminate."
 read randomkey
 
 clear
-
 apt update
 apt install -y tor obfs4proxy nyx vnstat
 
@@ -99,13 +97,16 @@ systemctl enable --now tor@default
 systemctl restart tor
 
 clear
-
 echo ""
-echo "## GET BRIDGE LINE AND IDENTIFY KEY FINGERPRINT ##"
-echo "cat /var/lib/tor/pt_state/obfs4_bridgeline.txt"
-echo "cat /var/lib/tor/fingerprint"
+echo "## TOR PATH ##"
+echo "bin            /usr/bin"
+echo "config         /etc/tor/torrc"
+echo "config_default /usr/share/tor"
+echo "data           /var/lib/tor"
+echo "log            /var/log/tor"
 echo ""
 echo "## TOR SERVICE AND USEFUL COMMANDS ##"
+echo "systemctl daemon-reload"
 echo "systemctl enable tor"
 echo "systemctl disable tor"
 echo "systemctl start tor"
@@ -118,6 +119,10 @@ echo "tail -f /var/log/tor/notices.log"
 echo "nyx"
 echo "vnstat"
 echo "htop"
+echo ""
+echo "## GET BRIDGE LINE AND IDENTIFY KEY FINGERPRINT ##"
+echo "cat /var/lib/tor/pt_state/obfs4_bridgeline.txt"
+echo "cat /var/lib/tor/fingerprint"
 echo ""
 echo "## USEFUL LINK FOR TOR BRIDGE STATUS (look on notices.log hashed identity key fingerprint) ##"
 echo "https://metrics.torproject.org/rs.html#details/HASHED_IDENTIFY_KEY_FINGERPRINT"

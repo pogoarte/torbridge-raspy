@@ -36,7 +36,7 @@ echo ""
 printf 'Please enter your public DNS or IP or leave blank and press enter (ex: mybridge.dyndns.org or 128.128.128.128):'
 read dns_ip
 echo ""
-printf 'Please enter ORport port. If your bridge is behind a FIEWALL or NAT, make sure to open/forward port (ex: 9001):'
+printf 'Please enter ORport port. If your bridge is behind a FIREWALL or NAT, make sure to open/forward port (ex: 9001):'
 read orport_port
 echo ""
 printf 'Please enter ORport port internet protocol type, if is only IPV4 write "IPv4Only", if is only IPV6 write "IPv6Only", if BOTH leave blank and press enter:'

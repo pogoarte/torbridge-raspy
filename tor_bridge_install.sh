@@ -1,4 +1,4 @@
-#!/bin/sh -e
+#!/bin/bash
 
 clear
 echo ""
@@ -14,9 +14,14 @@ echo "  BandwidthRate"
 echo "  BandwidthBurst"
 echo "  MaxAdvertisedBandwidth"
 echo ""
-
 echo -n "Press <any_key> to continue or <ctrl+c> for terminate."
 read randomkey
+echo ""
+
+if [[ $EUID -ne 0 ]]; then
+   echo "!!! This script must be run as root !!!" 
+   exit 1
+fi
 
 clear
 apt update

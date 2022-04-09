@@ -20,8 +20,8 @@ This is my torrc config and after 1 month uptime working without any problems:
 - RunAsDaemon 1
 - ExitPolicy reject *:*
 - ControlPort 9051
-- HashedControlPassword XX:XXXXXXXXXXXXXXXXXXXXXXXXX
-- Address mybridge.mydns.org
+- HashedControlPassword MyHashedControlPassword
+- Address mybridge.mydns.myorg
 - ORPort 11601 IPv4Only
 - ServerTransportPlugin obfs4 exec /usr/bin/obfs4proxy
 - ServerTransportListenAddr obfs4 0.0.0.0:11602
@@ -31,3 +31,4 @@ This is my torrc config and after 1 month uptime working without any problems:
 - BandwidthRate 512 KBytes
 - BandwidthBurst 768 KBytes
 - MaxAdvertisedBandwidth 640 KBytes
+- PublishServerDescriptor 1

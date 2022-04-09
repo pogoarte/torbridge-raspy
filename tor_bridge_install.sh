@@ -4,7 +4,7 @@ clear
 echo ""
 echo "!!! If your bridge is behind a firewall or NAT, make sure to open TCP port: ORPort and obfs4proxy !!!"
 echo ""
-echo "- Tested on RaspiOS Bullseye and Debian Bullseye."
+echo "- Tested on Raspberry Pi Zero W 1.1 Version and RaspiOS Bullseye Lite."
 echo "- Run update and install tor, torsocks, obfs4proxy, nyx (tor monitor) and vnstat (network traffic monitor)"
 echo "- Generate /etc/tor/torrc for bridge with:"
 echo "  notices.log (/var/log/tor/notices.log)"
@@ -56,13 +56,13 @@ echo ""
 printf 'Please enter your Nickname (ex: JohnDoe):'
 read nickname
 echo ""
-printf 'Please enter BandwidthRate value in KBytes (ex: 1024):'
+printf 'Please enter BandwidthRate value in KBytes (ex: 512):'
 read band_rate
 echo ""
-printf 'Please enter BandwidthBurst value in KBytes (ex: 2048):'
+printf 'Please enter BandwidthBurst value in KBytes (ex: 768):'
 read band_brust
 echo ""
-printf 'Please enter MaxAdvertisedBandwidth value in KBytes (ex: 1280):'
+printf 'Please enter MaxAdvertisedBandwidth value in KBytes (ex: 640):'
 read max_band
 echo ""
 printf 'Please enter PublishServerDescriptor value for bridge. 0 your bridge is private and 1 is public:'

@@ -12,7 +12,7 @@ Run update and install tor, torsocks, obfs4proxy, nyx, vnstat and generate /etc/
 
 -----------------------------------------------------------------------------------------------------------
 
-This is my torrc config and after 1 month uptime working without any problems:
+This is my torrc config IPv4Only and after 1 month uptime working without any problems:
 
 - SOCKSPort 0
 - Log notice file /var/log/tor/notices.log
@@ -20,8 +20,8 @@ This is my torrc config and after 1 month uptime working without any problems:
 - RunAsDaemon 1
 - ExitPolicy reject *:*
 - ControlPort 9051
-- HashedControlPassword MyHashedControlPassword
-- Address mybridge.mydns.myorg
+- HashedControlPassword xx:xxxxxxxxxxxxxxxxxxxx
+- Address xxx.xxx.xxx.xxx
 - ORPort 11601 IPv4Only
 - ServerTransportPlugin obfs4 exec /usr/bin/obfs4proxy
 - ServerTransportListenAddr obfs4 0.0.0.0:11602

@@ -1,4 +1,4 @@
-# torbridge
+# torbridge-raspy
 
 Simple script install tor bridge tested on my Raspberry Pi Zero W 1.1 Version and RaspiOS Bullseye Lite.
 

@@ -20,14 +20,14 @@ This is my torrc config IPv4Only and after 1 month uptime working without any pr
 - RunAsDaemon 1
 - ExitPolicy reject *:*
 - ControlPort 9051
-- HashedControlPassword xx:xxxxxxxxxxxxxxxxxxxx
-- Address xxx.xxx.xxx.xxx
-- ORPort 11601 IPv4Only
+- HashedControlPassword *********
+- Address *********
+- ORPort ********* IPv4Only
 - ServerTransportPlugin obfs4 exec /usr/bin/obfs4proxy
-- ServerTransportListenAddr obfs4 0.0.0.0:11602
+- ServerTransportListenAddr obfs4 0.0.0.0:*********
 - ExtORPort auto
-- ContactInfo MyContactInfo
-- Nickname MyNickName
+- ContactInfo *********
+- Nickname *********
 - BandwidthRate 512 KBytes
 - BandwidthBurst 768 KBytes
 - MaxAdvertisedBandwidth 640 KBytes

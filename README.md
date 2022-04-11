@@ -33,4 +33,6 @@ This is my torrc config IPv4Only and after 1 month uptime working without any pr
 - MaxAdvertisedBandwidth 640 KBytes
 - PublishServerDescriptor 1
 
+-----------------------------------------------------------------------------------------------------------
+
 ![Immagine](https://user-images.githubusercontent.com/98662243/162634140-2824c6ba-5979-4915-8127-2603f4dd9610.png)
